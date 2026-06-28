@@ -377,12 +377,15 @@ enum Command {
         #[arg(long)]
         raw: bool,
     },
-
+    /// Start debugger
     Debugger {
+        /// Override any existing debugger sessions
         #[arg(short, long, default_value = "true")]
         do_override: bool,
+        /// Name of the debugging PC
         #[arg(short, long, default_value = "xeedee")]
         name: String,
+        /// Name of the debugging user
         #[arg(short, long, default_value = "xeedee")]
         user: String,
     },
